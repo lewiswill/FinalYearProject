@@ -1,0 +1,11 @@
+
+.input-group{
+    width:200%;
+}
+[class*="col-"] {
+    margin-bottom: 4rem;
+}
+h1{
+    color: whitesmoke;
+    text-align: center;
+}
