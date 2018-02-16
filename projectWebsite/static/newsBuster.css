@@ -9,3 +9,12 @@ h1{
     color: whitesmoke;
     text-align: center;
 }
+#projectLogo{
+   width:50%;
+}
+.asteriskField {
+    display: none;
+}
+.userHeadlineFormField{
+    text-align: center
+}

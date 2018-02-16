@@ -6,22 +6,21 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel= "stylesheet" href="{% static newsBuster.css %}">
-<title>{% block title %}Home - Fake News Algorithm{% endblock %}</title>
+<title>{% block title %}Fake News Algorithm{% endblock %}</title>
 </head>
 
 <body>
     <!-- NavBar Starts here -->
-{% block navbar %}
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    {% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="sidebar">
   <a class="navbar-brand" href="#">Fake News Algorithm</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  {% block navbaroptions %}
-  <div class="collapse navbar-collapse" id="navbarColor03">
+  <div class="collapse navbar-collDpse" id="navbarColor03">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="home">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="features">Features</a>
@@ -31,27 +30,14 @@
       </li>
     </ul>
   </div>
-  {% endblock %}
-
 </nav>
 {% endblock %}
     <!-- NavBar Ends here -->
 
     <!-- Bootstrap container for News Article Headline form starts here -->
+{% block container %}
     <div class="container">
-    {% load static %}
-    <div id="projectLogo"><img id="projectLogo" src ="{% static "projectLogo.png" %}" alt="Project Logo"/></div>
-    {% load crispy_forms_tags %}
-    {% block form %}
-        <form method ="post" class="uniForm">
-            {{ form|crispy }}
-        {% block button %}
-        <button type="submit" class"btn btn-primary">Submit Headline</button>
-        {% endblock %}
-        {% csrf_token %}
-    {% endblock %}
-        </form>
-        {% block content %}
-        {% endblock %}
+        <div id="projectLogo"><img id="projectLogo" src ="{% static "projectLogo.png" %}" alt="Project Logo"/></div>
     </div>
+{% endblock %}
 </body>
