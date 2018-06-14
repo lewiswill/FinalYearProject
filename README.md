@@ -1,4 +1,4 @@
-# FinalYearProject
+# 'Fake News Algorithm' my Final Year Project.
 Final Year Project completed in 2018. A 'Fake News' Algorithm written using Python &amp; the Django Web framework.
 
 Project involves: Python, HTML, CSS/ JAVASCRIPT, Scikit-learn python machine learning libaries, Django, postgreSQL and some front-end tech such as bootstrap and some simple javascript.
